@@ -21,7 +21,8 @@ This repository will be used for sharing code, projects and notes
      * lets us compile c# code.
      * included with visual studio workload
      * gives us "dotnet" command
-
+     
+### [gitignore](https://github.com/dotnet/core/blob/master/.gitignore) 
   
 ### Useful Links
 * [Git Cheat Sheet](https://www.git-tower.com/blog/git-cheat-sheet)
