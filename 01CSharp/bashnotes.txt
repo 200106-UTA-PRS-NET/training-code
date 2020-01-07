@@ -47,7 +47,7 @@ nano:
         (Y, enter to save unsaved changes)
 
 TASK:
-1. CREATE YOUR P0 repo in the bact org : https://github.com/200106-UTA-PRS-NET
+1. CREATE YOUR P0 repo in the batch org : https://github.com/200106-UTA-PRS-NET
     P0-<firstname>-<lastname>
 2. Add a .gitignore file
 3. commit the changes 
