@@ -10,7 +10,7 @@ namespace ContactLib
        private int age;
        private string phone;
        private string email;
-       private long id;
+       
         // autonomous property
         public bool IsFullTime { get; set; }
 
@@ -39,7 +39,7 @@ namespace ContactLib
                 lastName = value;
             }
         }
-        public string GetEmployee(string firstName, string lastName, int age, string phone, string email, long id)
+        public string GetEmployee(string firstName, string lastName, int age, string phone, string email)
         {
             // this points to current member of the current class
             this.firstName = firstName;
@@ -47,9 +47,9 @@ namespace ContactLib
             this.age = age;
             this.phone = phone;
             this.email = email;
-            this.id = id;
+            
 
-            return $"Name - {firstName} {lastName} \n Age - {age} \n Phone - {phone} \n Email - {email} \n Emp Id- {id}";
+            return $"Name - {firstName} {lastName} \n Age - {age} \n Phone - {phone} \n Email - {email} ";
         }
         //Constructor - ctor + <tab> + <tab>
         public Contact()
