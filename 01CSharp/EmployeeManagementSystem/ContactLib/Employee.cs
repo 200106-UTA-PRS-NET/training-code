@@ -6,7 +6,7 @@ namespace ContactLib
     {
         public Person()
         {
-            Console.WriteLine("calling person class constructor");
+           // Console.WriteLine("calling person class constructor");
         }
     }
     public class Employee:Person
@@ -24,13 +24,47 @@ namespace ContactLib
         protected float tax;
         protected float medical;
         protected float bonus;
+        // Method overloading - method with same name in same class with different Signatures
+        /*
+         Method Signatures:
+            - Number parameters
+            - Type of Parameter
+            - Sequence of Parameter
+        */
 
         public decimal GetSalary()
         {
-            tax = 0.3f * bsal;
+            CalculateTax(bsal);
             return salary = Convert.ToDecimal(bsal + hra + bonus - tax - medical);
         }
-
+        // difference in number of parameters
+        public decimal GetSalary(float bsal)
+        {
+            //tax = 0.3f * bsal;
+            CalculateTax(bsal);
+            return salary = Convert.ToDecimal(bsal + hra + bonus - tax - medical);
+        }
+        // difference in type of parameters
+        public decimal GetSalary(double bsal,float bonus)
+        {
+            //  tax = 0.3f* Convert.ToSingle(bsal);
+            CalculateTax(Convert.ToSingle(bsal));
+            return salary = Convert.ToDecimal(bsal + hra + bonus - tax - medical);
+        }
+        // difference in sequence of parameters
+        public decimal GetSalary(float bonus, double bsal)
+        {
+            //tax = 0.3f * Convert.ToSingle(bsal);
+            CalculateTax(Convert.ToSingle(bsal));
+            return salary = Convert.ToDecimal(bsal + hra + bonus - tax - medical);
+        }
+        // Method Overiding - Redefining the method of base class in child class
+        protected virtual decimal CalculateTax(float bsal)
+        {
+            return Convert.ToDecimal(tax = 0.3f * bsal);
+        }
+       // Abstract method have no definition/implementation where as virtual methods does
+       // protected abstract decimal CalculateTax(float bsal);
         //default constructor
         public Employee()
         {
@@ -39,7 +73,7 @@ namespace ContactLib
             medical = 200.00f;
             bonus = 550.00f;
             Id = 111;
-            Console.WriteLine("Default constructor of Employee class");
+            //Console.WriteLine("Default constructor of Employee class");
         }
         //parameterized constructor
         public Employee(float bsal, float hra, float bonus, float medical, int id)
@@ -49,7 +83,7 @@ namespace ContactLib
             this.bonus = bonus;
             this.medical = medical;
             this.Id = id;
-            Console.WriteLine("Parameterized constructor of Employee class");
+            //Console.WriteLine("Parameterized constructor of Employee class");
         }
     }
 }

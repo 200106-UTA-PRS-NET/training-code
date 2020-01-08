@@ -10,6 +10,9 @@ namespace ContactLib
         {
             Console.WriteLine("Parametrized constructor of Manager class" );
         }
-
+        protected override decimal CalculateTax(float bsal)
+        {
+            return Convert.ToDecimal(base.tax = 0.4f * base.bsal);
+        }
     }
 }

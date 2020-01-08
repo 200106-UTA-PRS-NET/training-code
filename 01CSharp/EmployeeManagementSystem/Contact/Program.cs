@@ -23,8 +23,8 @@ namespace ContactUi
             Console.WriteLine(empDetails);
 
             Employee employee = new Employee(6000,3000,600,300,145);
-            Console.WriteLine("Salary of employee {0}", employee.GetSalary());
-
+            //Console.WriteLine("Salary of employee {0}", employee.GetSalary());
+            Console.WriteLine("Salary of employee {0}", employee.GetSalary(4320));
             Manager manager = new Manager(8000,4000,1000,600,666);
             Console.WriteLine($" Salary of Manager  {manager.GetSalary()}");
 
