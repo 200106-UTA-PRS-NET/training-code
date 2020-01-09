@@ -11,9 +11,25 @@ namespace LaptopServiceLib
     {
         public void Repair(Laptop laptop)
         {
-            Console.WriteLine("Repairing.......");
+            Console.WriteLine($"Laptop with Service tag {laptop.ServiceTag} is repaired......");
 
             Thread.Sleep(3000);
+
+            //Raising Event / publishing to subscribers
+            OnRepairCompletion();
         }
+
+        public event NotifyDel Repaired;
+
+        protected virtual void OnRepairCompletion()
+        {
+            if ( Repaired != null)
+            {
+                // invoking the event which needs to be handled by delgate NotifyDel
+                Repaired();
+            }
+        }
+
+
     }
 }
