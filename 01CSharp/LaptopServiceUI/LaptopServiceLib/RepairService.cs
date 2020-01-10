@@ -18,9 +18,7 @@ namespace LaptopServiceLib
             //Raising Event / publishing to subscribers
             OnRepairCompletion();
         }
-
-        public event NotifyDel Repaired;
-
+        public event Action Repaired;
         protected virtual void OnRepairCompletion()
         {
             if ( Repaired != null)

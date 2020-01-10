@@ -49,7 +49,6 @@ namespace LaptopServiceUI
             repairService.Repaired -= TextService.SendText;// unsubscribe
 
             repairService.Repair(laptop1);
-
             
         }
     }
