@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using JsonSerialization;
+
 
 namespace Serialization
 {
@@ -82,13 +84,17 @@ namespace Serialization
             
             // Method Syntax
             var emp1 = GetEmployees().Where(x => x.age == 27).FirstOrDefault();
-            Console.WriteLine(emp1.firstName);
-            Console.WriteLine(emp);
+            // Console.WriteLine(emp1.firstName);
+            // Console.WriteLine(emp);
             //foreach (var e in emp)
             //{
             //    Console.WriteLine($"{e.firstName} {e.lastName}");
             //}
-
+            Console.WriteLine("_-------------Serilizing data-----------------");
+            Console.WriteLine(JsonHelper<Employee>.Serialize<Employee>(emp1));
+            Console.WriteLine("_-------------DeSerializing data-----------------");
+            Employee employee=JsonHelper<Employee>.Deserialize<Employee>(JsonHelper<Employee>.Serialize<Employee>(emp1));
+            Console.WriteLine(employee.age);
         }
     }
 }
