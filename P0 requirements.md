@@ -4,14 +4,14 @@
 + [solution] PizzaBox.sln
   + [project - console] PizzaBox.Client.csproj
   + [project - classlib] PizzaBox.Domain.csproj
-    + [folder] Abstracts
-    + [folder] Interfaces
+    + [folder] Abstracts --optional
+    + [folder] Interfaces --optional
     + [folder] Models
   + [project - classlib ] PizzaBox.Storing.csproj
     + [folder] Repositories
   + [project - xunit] PizzaBox.Testing.csproj
-    + [folder] Mocks
-    + [folder] Specs
+    + [folder] Mocks --optional
+    + [folder] Specs --optional
 ## requirements
 ### store
 + [required] should exist at least 1 store
