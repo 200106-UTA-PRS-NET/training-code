@@ -2,6 +2,9 @@
 using System.Linq;
 using System.Collections.Generic;
 using System;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 namespace EmployeeApp
 {
@@ -21,14 +24,25 @@ namespace EmployeeApp
 
         static void Main(string[] args)
         {
-            AddEmployee(employee1());
+            // Configuration to access User Secrets.json
+            var configurBuilder = new ConfigurationBuilder()
+                            .SetBasePath(Directory.GetCurrentDirectory())
+                            .AddJsonFile("Secrets.json", optional: true, reloadOnChange: true);
+
+            IConfigurationRoot configuration= configurBuilder.Build();
+            var optionsBuilder=new DbContextOptionsBuilder<EmployeeDbContext>();
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("EmployeeDb"));
+            var options = optionsBuilder.Options;
+            EmployeeDbContext db = new EmployeeDbContext(options);
+
+            AddEmployee(db,employee1());
             Console.WriteLine("--------------Employee Added------------------");
             Employee emp2 = new Employee() {Id=1, Deptid = 2};
-            //ModifyEmployee(emp2);
+            //ModifyEmployee(db,emp2);
             // Console.WriteLine("-----------Employee Modified----------");
-            RemoveEmployee(3);
-            var employees = GetEmployees();            
-            ;
+           // RemoveEmployee(db,3);
+            var employees = GetEmployees(db);            
+            
             foreach (var emp in employees)
             {
                 if (emp.Mname !="" || emp.Mname != null)
@@ -37,18 +51,16 @@ namespace EmployeeApp
                     Console.WriteLine($"{emp.Fname} {emp.Lname}");
             }
         }
-        static IEnumerable<Employee> GetEmployees()
+        static IEnumerable<Employee> GetEmployees(EmployeeDbContext db)
         {
-            EmployeeDbContext db = new EmployeeDbContext();
             var query= from e in db.Employee
                        select e;
 
             return query;
         }
 
-        static void AddEmployee(Employee employee)
+        static void AddEmployee(EmployeeDbContext db,Employee employee)
         {
-            EmployeeDbContext db = new EmployeeDbContext();
             if (db.Employee.Any(e => e.Ssn == employee.Ssn) || employee.Ssn == null)
             {
                 Console.WriteLine($"This employee with SSN {employee.Ssn} already exists and cannot be added");
@@ -59,9 +71,8 @@ namespace EmployeeApp
                 db.SaveChanges();// this will execute the above generate insert query
         }
 
-        static void ModifyEmployee(Employee employee)
+        static void ModifyEmployee(EmployeeDbContext db,Employee employee)
         {
-            EmployeeDbContext db = new EmployeeDbContext();
             if (db.Employee.Any(e=>e.Id == employee.Id))
             {
                 var emp= db.Employee.FirstOrDefault(e => e.Id == employee.Id);
@@ -75,9 +86,8 @@ namespace EmployeeApp
             }
            
         }
-        static void RemoveEmployee(int id)
+        static void RemoveEmployee(EmployeeDbContext db,int id)
         {
-            EmployeeDbContext db = new EmployeeDbContext();
             var emp = db.Employee.FirstOrDefault(e => e.Id == id);
             if (emp.Id == id)
             {
