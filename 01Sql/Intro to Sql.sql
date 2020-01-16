@@ -86,4 +86,14 @@ update Revature.Employee set age=40,ssn=123456789
 	where Id=1
 
 insert into Revature.Employee(fname,lname,age,salary,ssn,deptid) values('Fred','Belotte',34,14000,'987654312',1)
+update Revature.Employee set mname='J' where id =5
 select * from Revature.Employee
+
+create table Revature.Department(
+Id int Primary key,
+name varchar(max) not null,
+phone char(10) not null
+)
+insert into Revature.Department values(1,'Development','9876543210'),(2,'Retention','7896541230')
+alter table Revature.Employee
+	add constraint FK_Dept_Employee_Id foreign key(deptId) references Revature.Department(Id)
