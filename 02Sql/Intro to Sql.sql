@@ -16,7 +16,7 @@
 		-- REVOKE USER
 
 -- datatypes in SQL
-	-- Strings - char[n]-> characters of size n, varchar(n)->variable of size n but doesn't acquire size n, nchar[]
+	-- Strings - char[n]-> characters of size n, varchar(n)->variable of size n but doesn't acquire size n, nchar[] -> unicode
 			declare @empname char(10); 
 			set @empname = 'Fred';
 			select @empname as 'Employee Name', LEN(@empname) as 'Length', COUNT(@empname) as 'Number of fields in the column', UPPER(@empname) as 'Name in Upper Case';
