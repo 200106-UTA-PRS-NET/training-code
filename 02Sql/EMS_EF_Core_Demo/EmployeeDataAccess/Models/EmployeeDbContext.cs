@@ -8,6 +8,7 @@ namespace EmployeeDataAccess.Models
     {
         public EmployeeDbContext()
         {
+            
         }
 
         public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options)

@@ -25,16 +25,11 @@ namespace EmployeeApp
         static void Main(string[] args)
         {
             // Configuration to access User Secrets.json
-            var configurBuilder = new ConfigurationBuilder()
-                            .SetBasePath(Directory.GetCurrentDirectory())
-                            .AddJsonFile("Secrets.json", optional: true, reloadOnChange: true);
+            var repo=Dependencies.CreateEmployeeRepository();
+            var employees= repo.GetEmployees();
+            
 
-            IConfigurationRoot configuration= configurBuilder.Build();
-            var optionsBuilder=new DbContextOptionsBuilder<EmployeeDbContext>();
-            optionsBuilder.UseSqlServer(configuration.GetConnectionString("EmployeeDb"));
-            var options = optionsBuilder.Options;
-            EmployeeDbContext db = new EmployeeDbContext(options);
-
+        /*
             AddEmployee(db,employee1());
             Console.WriteLine("--------------Employee Added------------------");
             Employee emp2 = new Employee() {Id=1, Deptid = 2};
@@ -42,7 +37,7 @@ namespace EmployeeApp
             // Console.WriteLine("-----------Employee Modified----------");
            // RemoveEmployee(db,3);
             var employees = GetEmployees(db);            
-            
+            */
             foreach (var emp in employees)
             {
                 if (emp.Mname !="" || emp.Mname != null)
@@ -51,6 +46,7 @@ namespace EmployeeApp
                     Console.WriteLine($"{emp.Fname} {emp.Lname}");
             }
         }
+        /*
         static IEnumerable<Employee> GetEmployees(EmployeeDbContext db)
         {
             var query= from e in db.Employee
@@ -100,5 +96,6 @@ namespace EmployeeApp
                 return;
             }
         }
+        */
     }
 }

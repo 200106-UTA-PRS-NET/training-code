@@ -13,7 +13,7 @@ namespace EmployeeDataAccess.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
-
+        // 1 to many relationships
         public virtual ICollection<Employee> Employee { get; set; }
     }
 }

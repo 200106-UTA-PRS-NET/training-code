@@ -15,6 +15,7 @@ namespace EmployeeDataAccess.Models
         public string Lname { get; set; }
         public string Mname { get; set; }
 
+        // 1 to 1 relationship
         public virtual Department Dept { get; set; }
     }
 }
