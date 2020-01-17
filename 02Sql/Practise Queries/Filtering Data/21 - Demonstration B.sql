@@ -1,5 +1,15 @@
 -- Demonstration B
 
+---- ORDER OF EXCEUTION OF THE QUERY
+-- select, from, orderby, where, having, groupby
+		--1. from
+		--2. where
+		--3. groupby
+		--4. Having
+		--5. select
+		--6. Order by
+
+
 -- Step 1: Connect to the AdventureWorksLT database
 -- Prepare the environment by running the following query (without this, all order dates are the same)
 UPDATE SalesLT.SalesOrderHeader 
@@ -42,13 +52,16 @@ WHERE CountryRegion = N'United Kingdom' OR CountryRegion = N'Canada';
 -- Use IN operator to evaluate from a list
 SELECT AddressLine1, CountryRegion
 FROM SalesLT.Address
-WHERE CountryRegion IN (N'United Kingdom',N'Canada');
+WHERE CountryRegion IN (N'United Kingdom',N'Canada',N'United States');
 
 -- Step 8: Use WHERE to filter results
 -- Use NOT operator with IN to provide an exclusion list
 SELECT AddressLine1, CountryRegion
 FROM SalesLT.Address
 WHERE CountryRegion NOT IN (N'United Kingdom',N'Canada');
+
+select distinct countryRegion
+from SalesLT.Address
 
 -- Step 9: Use WHERE to filter results
 -- Use logical operators to search within a range of dates

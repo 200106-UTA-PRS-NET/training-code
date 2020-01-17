@@ -6,7 +6,7 @@
 -- Step 2: Display various current date and time functions
 
 SELECT
-	GETDATE()			AS [GetDate],
+	GeTDATE()			AS [GetDate],
 	CURRENT_TIMESTAMP	AS [Current_Timestamp], --for ANSI SQL compatibility
 	GETUTCDATE()		AS [GetUTCDate],
 	SYSDATETIME()		AS [SYSDateTime],
@@ -14,9 +14,9 @@ SELECT
 	SYSDATETIMEOFFSET()	AS [SYSDateTimeOffset];
 	
 -- Step 3: Display various functions which return a portion of a date or time
-SELECT DATENAME(weekday,'20150113');
+SELECT DaTENAME(month,'20200117');
 SELECT DAY('20150113') AS [Day], MONTH('20150113') AS [Month],YEAR('20150113') AS [Year];
-SELECT DATEPART(WEEKDAY,'20150113');
+SELECT DATEPART(MONTH,'20150113');
 
 	
 -- Step 4: Display various functions which return a date or time from parts
@@ -28,7 +28,7 @@ SELECT DATETIMEOFFSETFROMPARTS(2012,2,12,8,30,0,0,-7,0,0) AS Result;
 
 -- Step 5: Demonstrate DATEDIFF with  this to show difference in precision:
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME()); 
-
+select DATEDIFF(year, '19950127',GETDATE()) as Age
 -- Step 6: Modify datetime with EOMONTH and DATEADD:
 SELECT DATEADD(day,2,'20150113');
 SELECT EOMONTH('20150113'); --return the end of the month in which this date occurs

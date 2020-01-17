@@ -11,7 +11,7 @@ SET	OrderDate = DATEADD(d,SalesOrderID % 7000, '2008-06-01'),
 -- Sorting by column name
 SELECT SalesOrderID, CustomerID, OrderDate
 FROM SalesLT.SalesOrderHeader
-ORDER BY OrderDate;
+ORDER BY OrderDate asc;
 
 -- Step 3: Use ORDER BY to sort results
 -- Sorting by column alias name

@@ -1,8 +1,8 @@
 -- Demonstration C
 
 -- Step 1: Filtering Groups with HAVING
--- Change to AdventureWorks database
-USE AdventureWorks;
+-- Change to AdventureWorksLT database
+USE AdventureWorksLT;
 GO
 
 -- Step 2a: Using the HAVING clause
@@ -16,7 +16,7 @@ GROUP BY CustomerID;
 SELECT CustomerID, COUNT(*) AS count_orders
 FROM SalesLT.SalesOrderHeader
 GROUP BY CustomerID
-HAVING COUNT(*) >= 1
+having COUNT(*) >= 1
 
 -- Step 2c: Review the logical order of operations
 -- the column alias for COUNT(*) hasn't been processed yet
