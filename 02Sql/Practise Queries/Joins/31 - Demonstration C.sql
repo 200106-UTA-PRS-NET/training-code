@@ -7,6 +7,11 @@ GO
 -- Step 2: Join 2 tables
 -- Select and execute the following query
 -- to show only matching customers and orders
+--left table 
+select * from Sales.Customer --19820
+--right table 
+select * from Sales.SalesOrderHeader --31465
+
 SELECT c.CustomerID, soh.SalesOrderID
 FROM Sales.Customer c JOIN Sales.SalesOrderHeader soh
 ON c.CustomerID = soh.CustomerID;
@@ -35,11 +40,16 @@ ON c.custid =o.custid;
 -- show customers without orders
 USE TSQL;
 GO
+--left table 
+select * from sales.Customers --91
+--right table 
+select * from sales.Orders--830
+
 SELECT c.custid, c.companyname, o.orderid, o.orderdate
 FROM Sales.Customers AS c
 LEFT OUTER JOIN Sales.Orders AS o
-ON c.custid =o.custid
-WHERE o.orderid IS NULL;
+ON c.custid =o.custid --832
+WHERE o.orderid IS NULL; --2
 
 -- Step 6: Join 2 tables
 -- Select and execute the following query to

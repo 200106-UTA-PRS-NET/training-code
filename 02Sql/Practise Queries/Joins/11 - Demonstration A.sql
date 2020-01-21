@@ -1,5 +1,12 @@
 -- Demonstration A
 
+--- Joins are used to perform cartesian product between tables
+	-- Inner Join/Natural Join
+	-- Outer join
+		-- Left
+		-- Right
+	-- Full join
+	-- Cross join - product of 2 tables
 -- Step 1: Open a new query window to the TSQL database
 USE TSQL;
 GO

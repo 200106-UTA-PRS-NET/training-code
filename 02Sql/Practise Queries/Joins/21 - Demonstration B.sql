@@ -4,6 +4,8 @@
 USE TSQL;
 GO
 
+select * from Production.Categories --8 rows
+select * from Production.Products --77 rows
 -- Step 2: Join 2 tables
 -- Select and execute the following query
 -- to demonstrate a two-table inner join.
@@ -17,6 +19,9 @@ ON c.categoryid = p.categoryid;
 -- Select and execute the following query
 -- to demonstrate a two-table inner composite join.
 -- Point out that there are 27 rows output without a distinct filter
+select * from Sales.Customers --91
+select * from Hr.Employees--9
+
 SELECT e.city, e.country
 FROM Sales.Customers AS c
 JOIN HR.Employees AS e 
@@ -26,6 +31,13 @@ ON c.city = e.city AND c.country = e.country;
 -- Select and execute the following query
 -- to demonstrate a two-table inner composite join.
 -- Point out that there are 3 rows output with a distinct filter
+
+SELECT DISTINCT  c.city, c.country
+FROM Sales.Customers AS c  --69
+
+SELECT DISTINCT  e.city, e.country
+FROM HR.Employees AS e  --5
+
 SELECT DISTINCT  e.city, e.country
 FROM Sales.Customers AS c
 JOIN HR.Employees AS e 
@@ -49,6 +61,8 @@ ON c.custid = o.custid;
 -- Select and execute the following query
 -- to demonstrate a three-table inner join.
 -- 2155 rows will be returned. Why?
+
+select * from Sales.OrderDetails --2155
 SELECT c.custid, c.companyname, o.orderid, o.orderdate, od.productid, od.qty
 FROM Sales.Customers AS c 
 JOIN Sales.Orders AS o
