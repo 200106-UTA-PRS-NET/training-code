@@ -1,0 +1,26 @@
+aside {
+    text-align:center;
+  }
+  
+  nav{
+    font-size: 20px;
+    background-color: lightseagreen;
+  }
+  body{
+    background-color:pink;
+  }
+/* this rule takes precedence over previous rule on <nav> */
+  nav{
+    font-size: 30px;
+    background-color:limegreen;
+  }
+  /* psuedo classes  */
+  a:visited{
+    color:purple
+  }
+  a:hover{
+    font-size: 50Px;
+  }
+  p::first-letter{
+    font-size: 20px;
+  }

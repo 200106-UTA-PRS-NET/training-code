@@ -1,0 +1,26 @@
+address{
+    /* Element Selector */
+    text-align: left;
+}
+#td2{
+    margin-left: 100px;
+}
+.inputtext{
+    background-color: lightgreen;
+}
+*{
+    /* universal selector */
+    font-family: fantasy;
+}
+li, label{
+    color: brown;
+}
+/* Any child within ol */
+/* ol li{ */
+/* applies to direct child of the ol */
+ol>li{
+    font-style: italic;
+}
+.gender{
+    color:black;
+}

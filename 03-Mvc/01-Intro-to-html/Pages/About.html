@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title >Contact Us</title>
+  <title>About Us</title>
+  <!-- This is linking of an external style sheet -->
+  <link rel="stylesheet" href="../Styles/common.css">
 </head>
 <body>
   <header>
@@ -20,10 +22,10 @@
       Relative: with in the same folder or same project
       Absolute : fully qualified path
     -->
-    <a href="Home.html">Home</a>
-    <a href="About.html">About Us</a>
+    <a href="../Pages/Home.html">Home</a>
+  <a href="../Pages/About.html">About Us</a>
     <!-- Absolute path -->
-    <a href="C:\Revature\training-code\03-Mvc\01-Intro-to-html\Contact.html">Contact Us</a>
+    <a href="C:\Revature\training-code\03-Mvc\01-Intro-to-html\pages\Contact.html">Contact Us</a>
     <a href="https://revature.com/" target="_blank">Revature</a>
     </nav>
   </th>
@@ -32,103 +34,72 @@
 <hr>
 <br>
   </header>
-  <h1>Contact Us Page</h1>
-  <table>
+  <main>
+<p>Revature hires fresh UG and provide 10-12 week training so that hired associates are ready to work on real time projects</p>
+<h3>The full stack .net training includes</h3>
+<table>
+  <thead>
+    <th>Week #</th>
+    <th>Technology</th>
+    <th>Type</th>
+  </thead>
+  <tbody>
     <tr>
-      <td>
-        <address>
-          <p>11730 Plaza America Dr,</p>
-          <p>Reston, Virginia</p>
-          <p>20190</p>
-          <p>Tel - 730-456-7890</p>
-          Email - <a href=mailto:contact@revature.com>contact@revature.com</a>
-        </address>
-      </td>
-      <td>
-        <p>Send us a query</p>
-        <!-- 
-          Request has 2 major parts - 
-            Request head - url, protocol, querystring
-            Request body - where you pass the heavy object value
-         -->
-         <!-- 
-           Attributes - additional behaviours of the html element
-           global attributes : they are common attributes for all the elements. Eg: id, name, class
-           Local attributes : they are specific to the elements. Eg <a> has href, img has src and alt
-          -->
-        <form action="Home.html" method="post">
-          <table>
-            <tr>
-              <td>
-                <label for="name">Name</label>
-              </td>
-              <td>
-                <input id="name" name="name" type=text required>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="email">Email</label>
-              </td>
-              <td>
-                <input id="email" name="email" required type="email">
-              </td>
-            </tr>
-            <tr> 
-              <td>
-              <label for="age">Age</label>
-            </td>
-            <td>
-              <input id="age"  min=18 max=75 name="age" type=number >
-            </td>
-            </tr>
-            <tr>
-              <td><label for="phone">Phone</label></td>
-              <td>
-                <input id="phone" type="tel" pattern="[0-9]{10}">
-              </td>
-            </tr>
-            <tr>
-              <td>Gender</td>
-              <td>
-               <input id="male" name="gender" type="radio"> <label for="gender">Male</label>
-               <input id="female" name="gender" type="radio"> <label for="gender">Female</label>
-               <input id="others" name="gender" type="radio"> <label for="gender">Others</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label for="query">Query</label>
-              </td>
-              <td>
-                <textarea id="query" rows="5" cols="20" minlength="10" maxlength="25"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input id="subscribe" type=checkbox>
-              </td>
-              <td>
-                <label for="subscribe">Do you want to subscribe to weekly news</label>
-              </td>
-            </tr>
-            <tr>
-              <td>
-              <input type="submit">
-            </td>
-            </tr>
-          </table>
-        </form>
-      </td>
+      <td>1</td>
+      <td>C#</td>
+      <td>Server-side</td>
     </tr>
-  </table>
-  <p> different  form inputs are :</p>
-  <ol>
-    <li>text</li>
-    <li>date</li>
-    <li>checkbox</li>
-    <li>radio</li>
-    <li>number</li>
-  </ol>
+    <tr>
+      <td>2</td>
+      <td>SQL</td>
+      <td>Backend</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Asp.Net MVC</td>
+      <td>Server-Side</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>DevOps</td>
+      <td>Infra as a code</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>JavaScript and Angular</td>
+      <td>Client-Side</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Api</td>
+      <td>Server-Side</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4> What is your favourite Technology</h4>
+<select>
+<optgroup label=Server-Side>
+  <option>Java</option>
+  <option>C#</option>
+</optgroup>
+<optgroup label=client-side>
+  <option>JavaScript</option>
+  <option>TypeScript</option>
+</optgroup>
+</select>
+  </main>
+  <br>
+  <hr>
+  <br>
+  <h2>Please see our 1 minute video</h2>
+  <video controls > 
+      <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+      <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+      <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+      <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+  </video>
+  <footer>&copy; Revature 2020</footer>
+ 
 </body>
 </html>
