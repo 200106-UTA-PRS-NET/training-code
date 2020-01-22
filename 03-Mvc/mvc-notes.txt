@@ -1,0 +1,31 @@
+MVC
+	Model
+	View
+	Controller
+
+Host->Server
+	IIS- Microsoft propriotery server
+	Kestrel - This is the platform independent server (which can be hosted to windows, macOS, linux based)
+
+Controller 
+	class which inherits Controller (namespace -> Microsoft.AspNetCore.Mvc)
+	this class has Controller as suffix which distinguishes between a regular class and a controller class
+	Controller have action methods which are called to handle requests Eg: give me an Index view.
+		Action Methods can have different ActionResults which are implementation classes for IActionResult
+			IActionResult
+				ActionResult
+					ViewResult
+						View() -> returns a view or a template or an html
+
+					PartialViewResult
+						PartialView() -> view within a view
+				JsonResult
+					Json()
+				FileContentResult
+					File()
+
+				ContentResult
+					Content() -> String				
+
+
+	

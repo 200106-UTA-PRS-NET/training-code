@@ -5,6 +5,13 @@ aside {
   nav{
     font-size: 20px;
     background-color: lightseagreen;
+    /* TRouBLe is the sequence for border, margin, padding */
+  }
+  nav a{
+    padding-left: 20px;
+    /* border: 0px, 1px, 0px, 1px solid black ; */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
   }
   body{
     background-color:pink;
@@ -24,3 +31,13 @@ aside {
   p::first-letter{
     font-size: 20px;
   }
+  .Eng{
+    color:green;
+  }
+  span{
+    color:red !important;
+    /* display:none; */
+  }
+ p{
+   display: inline;
+ }
