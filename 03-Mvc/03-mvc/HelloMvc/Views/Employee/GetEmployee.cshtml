@@ -1,0 +1,12 @@
+@* Strongly typed view *@
+@model IEnumerable<Employee>
+<h1>Employees List</h1>
+<p>
+    <ol>
+    @foreach (var employee in Model)
+    {
+            <li>@employee.FirstName  @employee.LastName</li>       
+    }
+    </ol>
+</p>
+@Html.Partial("_DateTimePartial")

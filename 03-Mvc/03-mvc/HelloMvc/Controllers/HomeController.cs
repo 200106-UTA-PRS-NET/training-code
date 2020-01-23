@@ -16,11 +16,14 @@ namespace HelloMvc.Controllers
         public string Hello(){
             return "Hello MVC";
         }
-        public IActionResult Page1(){
+        public ViewResult Page1(){
             return View("MainPage");
         }
         public IActionResult Index()
         {
+            // view bag is a dynamic property in C#
+            //ViewBag.Message="I am in index page"; 
+            ViewData["Message"]="I am in index page";
             return View();
         }
 

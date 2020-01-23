@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page</title>
+    </head>
+    <body>
+        <header>
+            @RenderSection("date",false)
+        <nav>
+            <a>Home</a>
+            <a>About</a>
+            <a>Contact</a>
+        </nav>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer>
+            &copy;Revature 2020
+            @RenderSection("time",false)
+        </footer>
+    </body>
+</html>

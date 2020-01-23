@@ -23,9 +23,35 @@ Controller
 					Json()
 				FileContentResult
 					File()
-
 				ContentResult
 					Content() -> String				
+
+Whenever a request is placed the controller looks for the Action method (which returns the view most of the time). This process of looking after appropriate view in the folder 
+named after controller is known as View Discovery.
+View Discovery
+	if the name of ActionMethod matches with the View name (.cshtml)
+	if the Action method explicitly mentions the name of the view and it looks for that view in that folder (on the name of controller)
+		or 
+	in shared folder
+
+Layout View : shares the common html accross all the views 
+	@RenderBody
+	@RenderSection
+
+Passing Data
+	Controller to View
+		ViewBag
+		ViewData
+		Model
+		
+Views : they are the pages visible to Users. In Asp.Net Core View Engine (Razor) renders the page 
+	Types of Views
+		1. Layout View
+		2. Weakly Typed View
+		3. Strongly Typed View
+		4. Static view
+		5. Partial Views
+
 
 
 	
