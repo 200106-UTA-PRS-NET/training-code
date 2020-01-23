@@ -53,6 +53,23 @@ Views : they are the pages visible to Users. In Asp.Net Core View Engine (Razor)
 		5. Partial Views : a small part of the page for reusability or to make code simple
 		6. Dynamic Views: Views which are strongly typed but not explicitly tied to the model
 
+Views as Forms:
+Razor Syntax
+	Razor Expressions @Model, @if(){}
+	Razor Blocks @{
+		// code in C#
+		}
+	To create views there are various ways	:
+		1. Plain HTML
+		2. HTML Helper methods - which has helper methods which generate html elements with name and id attribute
+		3. Tag Helpers
 
+
+
+Model binding - a system that binds all the values which are required for Action of type [HttpPost] into its parameter
+	1. Route
+	2. QueryString
+	3. FormCollection
+	4. File
 
 	

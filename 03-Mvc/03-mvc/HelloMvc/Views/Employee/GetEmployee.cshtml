@@ -8,9 +8,12 @@
     //var employees=ViewData["Employee"] as IEnumerable<Employee>;
     //var employees=ViewBag.Employee;
     //foreach (var employee in employees )
+    <li><em>Id     FirstName     LastName</em> </li>
         foreach(var employee in Model)
         {
-                <li>@employee.FirstName  @employee.LastName</li>       
+                <li>
+                    @employee.Id @employee.FirstName  @employee.LastName    <a asp-controller="Employee" asp-action="EditEmployee" asp-route=@employee.Id>Edit</a>
+                </li>       
         }
     }
     </ol>

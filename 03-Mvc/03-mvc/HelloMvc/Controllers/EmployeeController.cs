@@ -29,16 +29,26 @@ namespace HelloMvc.Controllers{
         public string Display(){
             return DateTime.Now.ToShortDateString();
         }
-
+// this Action is providing the UI to the USEE
         public ViewResult AddEmployee(){
             return View();
         }
+        // this action is an overload of previous Action with a parameter and this is used to save the Employee
         [HttpPost]
         public IActionResult AddEmployee(Employee employee){
             
            employees.Add(employee);
            return RedirectToAction("GetEmployee");
         }
-
+       /* [HttpGet]
+        public IActionResult EditEmployee(int id){
+            return View();
+        }
+        [HttpPost]
+        public IActionResult EditEmployee(Employee employee, int? id){
+            if(id != 0 || id !=null)
+                employees.Add(employee);
+           return RedirectToAction("GetEmployee");
+        }*/
     }
 }

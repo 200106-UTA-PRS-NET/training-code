@@ -1,38 +1,9 @@
-@model Employee;
-@* Creating Form using HTML Helpers  *@
-
-@* @Html.ActionLink("Back","GetEmployee")
-<div class=container>
-@using(Html.BeginForm("AddEmployee")){    
-    @Html.LabelFor(m=>m.Id)
-    @Html.TextBoxFor(m=>m.Id)<br>
-    @Html.LabelFor(m=>m.FirstName)
-    @Html.EditorFor(m=>m.FirstName)<br>
-    @Html.LabelFor(m=>m.LastName)
-    @Html.EditorFor(m=>m.LastName)<br>
-    <input type = "submit" value="Add">
-}
-</div>
-@{
-    // Razor Block
-if(1==1)
- System.Console.WriteLine("Hello World");
-} *@
-
-@* Creating Forms using Tag Helpers *@
-@* 
-    asp-controller => Mentions the controller
-    asp-action =? Mentions the actions
-    asp-for => to mention the model
-    asp-validation-for => for validating the Model
- *@
- <div class =" container">
-    <form asp-controller="Employee" asp-action="AddEmployee" method="post">
+@model Employee
+<div class =" container">
+    <form asp-controller="Employee" asp-action="EditEmployee" asp-route=@Model.Id method="post">
         <div class="form-group-row">
             <label asp-for="Id" class=" col-sm-3 form-control-label" ></label>
-            <div class =" col-sm-9">
-                <input asp-for="Id" class ="form-control" placeholder="Id of the Employee">
-            </div>
+            @Model.Id
         </div>
         <div class="form-group-row">
             <label asp-for="FirstName" class=" col-sm-3 form-control-label" ></label>
