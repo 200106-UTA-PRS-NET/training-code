@@ -1,0 +1,18 @@
+@model Employee;
+@Html.ActionLink("Back","GetEmployee")
+<div class=container>
+@using(Html.BeginForm("AddEmployee")){    
+    @Html.LabelFor(m=>m.Id)
+    @Html.TextBoxFor(m=>m.Id)<br>
+    @Html.LabelFor(m=>m.FirstName)
+    @Html.EditorFor(m=>m.FirstName)<br>
+    @Html.LabelFor(m=>m.LastName)
+    @Html.EditorFor(m=>m.LastName)<br>
+    <input type = "submit" value="Add">
+}
+</div>
+@{
+    // Razor Block
+if(1==1)
+ System.Console.WriteLine("Hello World");
+}

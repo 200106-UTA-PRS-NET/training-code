@@ -49,8 +49,9 @@ Views : they are the pages visible to Users. In Asp.Net Core View Engine (Razor)
 		1. Layout View
 		2. Weakly Typed View
 		3. Strongly Typed View
-		4. Static view
-		5. Partial Views
+		4. Static view : plain html with no data
+		5. Partial Views : a small part of the page for reusability or to make code simple
+		6. Dynamic Views: Views which are strongly typed but not explicitly tied to the model
 
 
 

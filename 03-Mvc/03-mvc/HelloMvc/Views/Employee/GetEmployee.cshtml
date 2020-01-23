@@ -1,12 +1,20 @@
 @* Strongly typed view *@
-@model IEnumerable<Employee>
+@* @model IEnumerable<Employee> *@
 <h1>Employees List</h1>
 <p>
     <ol>
-    @foreach (var employee in Model)
-    {
-            <li>@employee.FirstName  @employee.LastName</li>       
+
+    @{
+    //var employees=ViewData["Employee"] as IEnumerable<Employee>;
+    //var employees=ViewBag.Employee;
+    //foreach (var employee in employees )
+        foreach(var employee in Model)
+        {
+                <li>@employee.FirstName  @employee.LastName</li>       
+        }
     }
     </ol>
+    @Html.ActionLink("Add Employee","AddEmployee")
 </p>
-@Html.Partial("_DateTimePartial")
+@* @Html.Partial("_DateTimePartial") *@
+<partial name="_DateTimePartial"/>
