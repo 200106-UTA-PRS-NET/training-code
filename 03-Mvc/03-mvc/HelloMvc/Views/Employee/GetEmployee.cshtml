@@ -2,17 +2,18 @@
 @* @model IEnumerable<Employee> *@
 <h1>Employees List</h1>
 <p>
+    <strong> Name</strong>
     <ol>
-
     @{
     //var employees=ViewData["Employee"] as IEnumerable<Employee>;
     //var employees=ViewBag.Employee;
-    //foreach (var employee in employees )
-    <li><em>Id     FirstName     LastName</em> </li>
+    //foreach (var employee in employees 
         foreach(var employee in Model)
         {
                 <li>
-                    @employee.Id @employee.FirstName  @employee.LastName    <a asp-controller="Employee" asp-action="EditEmployee" asp-route=@employee.Id>Edit</a>
+                     @employee.FirstName  @employee.LastName    <a asp-controller="Employee" 
+                                                                               asp-action="EditEmployee" 
+                                                                               asp-route-id=@employee.Id>Edit</a>
                 </li>       
         }
     }

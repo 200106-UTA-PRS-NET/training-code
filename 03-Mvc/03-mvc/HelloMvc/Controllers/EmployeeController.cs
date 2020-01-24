@@ -40,15 +40,22 @@ namespace HelloMvc.Controllers{
            employees.Add(employee);
            return RedirectToAction("GetEmployee");
         }
-       /* [HttpGet]
+        [HttpGet]
         public IActionResult EditEmployee(int id){
+            ViewBag.id=id;
             return View();
         }
         [HttpPost]
         public IActionResult EditEmployee(Employee employee, int? id){
-            if(id != 0 || id !=null)
-                employees.Add(employee);
+        if(id != 0 || id !=null)
+        {
+                var emp=employees.Find(x=>x.Id==id) ;
+                if(emp !=null){
+                    emp.FirstName=employee.FirstName;
+                    emp.LastName=employee.LastName;
+                }
+        }
            return RedirectToAction("GetEmployee");
-        }*/
+        }
     }
 }
