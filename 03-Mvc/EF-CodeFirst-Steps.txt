@@ -1,0 +1,12 @@
+Converting Console Project to MVC Project with EF Core using Code First
+
+1. Create  MVC app using template MVC with Models,Views and Controller
+2. Add the Library Project as it is (in solution add it as existing project)
+3. Create a class Lib project using .net core as Data Project (EF core with Code First)
+	3.1 Install-Package Microsoft.EntityFrameworkCore.SqlServer
+	3.2 Install-Package Microsoft.EntityFrameworkCore.Tools
+4. Install the same package in Web Project as well
+	4.1 in appSettings.<env>.json add the connection string as 
+		```"ConnectionStrings": {
+    			"<connection string name>": "Server=<Server>;Database=<Database name>; Trusted_Connection=true"
+  		}```
