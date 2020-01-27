@@ -72,4 +72,7 @@ Model binding - a system that binds all the values which are required for Action
 	3. FormCollection
 	4. File
 
+Routing:
+	Conventional Routing: the routes are configured in StartUp.cs with a pattern
+	Attribute Based Routing : the routes are applied as Attributes on Controller/Action
 	

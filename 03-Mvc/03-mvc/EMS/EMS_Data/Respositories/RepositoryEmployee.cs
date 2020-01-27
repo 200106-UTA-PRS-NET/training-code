@@ -40,6 +40,12 @@ namespace EMS_Data.Repository
 
             return query;
         }
+        public EmployeeLib.Employee GetEmployeeById(int id)
+        {
+            var query = from e in db.Employee.Include(e => e.Dept).Where(m => m.Id == id)
+                        select Mapper.Map(e);
+            return query.FirstOrDefault();
+        }
 
         public void ModifyEmployee(EmployeeLib.Employee employee)
         {

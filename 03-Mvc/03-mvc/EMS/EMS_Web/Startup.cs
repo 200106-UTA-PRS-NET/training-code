@@ -61,15 +61,23 @@ namespace EMS_Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
+            //app.UseMvcWithDefaultRoute();//{Controller}/{Action}/{id?}
+            app.UseRouting();// this is the middleware for routing
+           
             app.UseAuthorization();
 
+            // conventional Routing
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name:"Employee",
+                //    pattern:"Employee/{action=Index}/{id?}"
+                //    );
+
             });
         }
     }
