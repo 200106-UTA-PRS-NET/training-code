@@ -1,11 +1,11 @@
-Converting Console Project to MVC Project with EF Core using Code First
+Migrating Console Project to MVC Project with EF Core using Code First
 
 1. Create  MVC app using template MVC with Models,Views and Controller
 2. Add the Library Project as it is (in solution add it as existing project)
 3. Create a class Lib project using .net core as Data Project (EF core with Code First)
 	3.1 Install-Package Microsoft.EntityFrameworkCore.SqlServer
 	3.2 Install-Package Microsoft.EntityFrameworkCore.Tools
-4. Install the same package in Web Project as well
+4. Install the same packages in Web Project as well
 	4.1 in appSettings.<env>.json add the connection string as 
 		```"ConnectionStrings": {
     			"<connection string name>": "Server=<Server>;Database=<Database name>; Trusted_Connection=true"
@@ -20,6 +20,6 @@ Converting Console Project to MVC Project with EF Core using Code First
             // Adding Dependency to your Controller to use Db
             services.AddScoped<IRepositoryEmployee<EmployeeLib.Employee>, RepositoryEmployee>();
 	```
-6. In web project using PMC Run these commands
+6. In Data project using PMC Run these commands (make sure the web project is a start up project)
 	6.1  `Add-Migrations <name of the migration>'  : this command will generate the migration folder in the web project and this folder will maintain the history of the migrations
-	6.2 `Update-Database` : this command will run the migration in the DB server and generate the DB->Tables->add Seed values (OnModelCreating method in DbContext class)
+	6.2  `Update-Database` : this command will run the migration in the DB server and generate the DB->Tables->add Seed values (OnModelCreating method in DbContext class)

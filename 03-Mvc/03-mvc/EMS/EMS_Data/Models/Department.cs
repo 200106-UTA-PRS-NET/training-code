@@ -14,6 +14,7 @@ namespace EMS_Data.Models
         public string Name { get; set; }
         public string Phone { get; set; }
         // 1 to many relationships
+        public string Head { get; set; }
         public virtual ICollection<Employee> Employee { get; set; }
     }
 }

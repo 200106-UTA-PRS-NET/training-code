@@ -15,6 +15,7 @@ namespace EMS_Data.Models
         {
 
         }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Add some seed values

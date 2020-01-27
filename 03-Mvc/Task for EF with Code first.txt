@@ -1,21 +1,27 @@
 1. Create a Library Project 
-	Add Employee and Department Classes
-	Add DbContext Class
 	in PMC 
 		Install-Package Microsoft.EntityFrameworkCore.SqlServer
 		Install-Package Microsoft.EntityFrameworkCore.Tools
+	Add Employee and Department Classes
+	Add DbContext Class
+	override the OnModelCreating(){
+	 	//Add seed data here 
+	}
+
 
 2. Build the project
 3. Create a Web project
+	In PMC	
+		Install-Package Microsoft.EntityFrameworkCore.SqlServer
+		Install-Package Microsoft.EntityFrameworkCore.Tools
 	Reference the data project to the web one
 	add connection string in appsettings.development.json
-	add a gitignore and add the appsettings.development.json 
+	add a gitignore and add the appsettings.development.json to it
 	Add the DbContext as a dependency in startup class
-	get connection sting 
-	call UseSqlServer() middle ware
+	get connection string using Configuration.
+	call UseSqlServer() middle ware and pass connection string to it	
 	
-4. in PMC 
-	Install-Package Microsoft.EntityFrameworkCore.SqlServer
-	Install-Package Microsoft.EntityFrameworkCore.Tools
+
+4. in PMC for DataLib (make sure your Web project is a starUp project)
 	Add-Migration <name of the migration>
 	Update-Database
