@@ -1,0 +1,21 @@
+1. Create a Library Project 
+	Add Employee and Department Classes
+	Add DbContext Class
+	in PMC 
+		Install-Package Microsoft.EntityFrameworkCore.SqlServer
+		Install-Package Microsoft.EntityFrameworkCore.Tools
+
+2. Build the project
+3. Create a Web project
+	Reference the data project to the web one
+	add connection string in appsettings.development.json
+	add a gitignore and add the appsettings.development.json 
+	Add the DbContext as a dependency in startup class
+	get connection sting 
+	call UseSqlServer() middle ware
+	
+4. in PMC 
+	Install-Package Microsoft.EntityFrameworkCore.SqlServer
+	Install-Package Microsoft.EntityFrameworkCore.Tools
+	Add-Migration <name of the migration>
+	Update-Database

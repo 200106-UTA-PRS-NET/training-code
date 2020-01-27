@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EMS_Data.Models
 {
-    [Table("employee", Schema ="Revature")]
+    [Table("employee", Schema ="Revature")]// this annotation withh generate a table <e>mployee and it will be tied to a schema (if its not present it will generate schema as well) Revature
     public class Employee
     {
         /*
@@ -24,6 +24,7 @@ namespace EMS_Data.Models
         [Column("salary")]
         public decimal? Salary { get; set; }
         [Column("ssn")]
+        //[Required]
         public string Ssn { get; set; }      
         public int? Deptid { get; set; }
         [Required(ErrorMessage ="First name cannot be Empty"),StringLength(30)]
@@ -43,6 +44,8 @@ namespace EMS_Data.Models
         }
 
         // 1 to 1 relationship
+        //[ForeignKey("reference")]
+        // virtual means this table will be lazily loaded
         public virtual Department Dept { get; set; }
     }
 }

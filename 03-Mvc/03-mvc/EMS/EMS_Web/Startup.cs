@@ -22,15 +22,26 @@ namespace EMS_Web
             Configuration = configuration;
         }
         // This method we use for DI
+        //Configuration Variable will look for the environment settings in these files
+        /*
+             launchSettings.json
+             Secrets.json
+             appsettings.<environment>.json
+             appsettings.json
+             */
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EmployeeDbContext>(options=>
-                options.UseSqlServer(Configuration.GetConnectionString("EmpDb")));
+            //looks for connections string from one of the .json files
+            string connectionString = Configuration.GetConnectionString("EmpDb");
 
+            services.AddDbContext<EmployeeDbContext>(options=>
+                options.UseSqlServer(connectionString));
+            // Adding Dependency to your Controller to use Db
             services.AddScoped<IRepositoryEmployee<EmployeeLib.Employee>, RepositoryEmployee>();
+
             services.AddControllersWithViews();
         }
 

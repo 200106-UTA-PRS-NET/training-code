@@ -10,3 +10,16 @@ Converting Console Project to MVC Project with EF Core using Code First
 		```"ConnectionStrings": {
     			"<connection string name>": "Server=<Server>;Database=<Database name>; Trusted_Connection=true"
   		}```
+5. Add the DbContext as a dependency to StartUp.cs
+	```
+		//looks for connections string from one of the .json files
+            string connectionString = Configuration.GetConnectionString("EmpDb");
+
+            services.AddDbContext<EmployeeDbContext>(options=>
+                options.UseSqlServer(connectionString));
+            // Adding Dependency to your Controller to use Db
+            services.AddScoped<IRepositoryEmployee<EmployeeLib.Employee>, RepositoryEmployee>();
+	```
+6. In web project using PMC Run these commands
+	6.1  `Add-Migrations <name of the migration>'  : this command will generate the migration folder in the web project and this folder will maintain the history of the migrations
+	6.2 `Update-Database` : this command will run the migration in the DB server and generate the DB->Tables->add Seed values (OnModelCreating method in DbContext class)
