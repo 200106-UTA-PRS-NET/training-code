@@ -22,8 +22,6 @@
 (Global, Controller, Action, Parameter-Route, Parameter-Query)
 - Validation
 (Server, Client, CSRF, Anti-Forgery)
-- Testing
-(Behavior Driven Development, Mock, Acceptance-Testing)
 - Filters
 (Action, Authorization, Custom, Exception, Response)
 - Helpers
