@@ -19,10 +19,11 @@ namespace EmployeeDataAccess
                 Mname=employee.Mname,
                 Salary=employee.Salary,
                 Ssn=employee.Ssn,
-                Startdate=employee.Startdate
+                Startdate=employee.Startdate,
+                department=Mapper.Map(employee.Dept)
             };
         }
-       public static EMS_Data.Models.Employee Map(EmployeeLib.Employee employee)
+        public static EMS_Data.Models.Employee Map(EmployeeLib.Employee employee)
         {
             return new EMS_Data.Models.Employee()
             {
@@ -35,6 +36,25 @@ namespace EmployeeDataAccess
                 Salary = employee.Salary,
                 Ssn = employee.Ssn,
                 Startdate = employee.Startdate
+            };
+        }
+
+        public static EmployeeLib.Department Map(EMS_Data.Models.Department department)
+        {
+            return new EmployeeLib.Department()
+            {
+                Id = department.Id,
+                Name = department.Name,
+                Phone = department.Phone
+            };
+        }
+        public static EMS_Data.Models.Department Map(EmployeeLib.Department department)
+        {
+            return new EMS_Data.Models.Department()
+            {
+                Id = department.Id,
+                Name = department.Name,
+                Phone = department.Phone
             };
         }
     }

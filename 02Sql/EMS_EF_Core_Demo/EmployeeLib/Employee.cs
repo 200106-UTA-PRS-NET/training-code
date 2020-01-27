@@ -13,5 +13,6 @@ namespace EmployeeLib
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Mname { get; set; }
+        public Department department { get; set; }
     }
 }

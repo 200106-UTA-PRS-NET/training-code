@@ -40,7 +40,7 @@ namespace EMS_Web
             services.AddDbContext<EmployeeDbContext>(options=>
                 options.UseSqlServer(connectionString));
             // Adding Dependency to your Controller to use Db
-            services.AddScoped<IRepositoryEmployee<EmployeeLib.Employee>, RepositoryEmployee>();
+            services.AddTransient<IRepositoryEmployee<EmployeeLib.Employee>, RepositoryEmployee>();
 
             services.AddControllersWithViews();
         }

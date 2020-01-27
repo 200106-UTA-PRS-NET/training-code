@@ -35,8 +35,8 @@ namespace EMS_Data.Repository
 
         public IEnumerable<EmployeeLib.Employee> GetEmployees()
         {
-            var query = from e in db.Employee
-                        select Mapper.Map(e);
+            var query = from e in db.Employee.Include(e => e.Dept)// eager loading 
+                        select Mapper.Map(e);                       
 
             return query;
         }
