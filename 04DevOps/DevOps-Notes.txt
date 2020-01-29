@@ -1,0 +1,77 @@
+## Version Control Systems
+- Version Control System to keep track of all the changes
+- Types
+    - Centralised : SVN, TFS
+    - Distributed : Git
+    
+- bash commands:
+   - `cd <dir>`
+        change directory, can be absolute (like "/c/revature")
+        or relative (like "my-project" in the current folder)
+   - `ls <dir>`
+        list contents of a directory
+        (or the current directory, by default)
+   - `mkdir <dir>`
+        create a directory
+   - `rm <path>`
+        delete a file
+   - `rm -r <path>`
+        delete a directory
+   - `mv <path1> <path2>`
+        rename/move a file/directory
+## GIT
+3 places in git 
+- Working Directory
+- Staging Area
+- .git Directory/Repo
+
+### Basic git commands 
+    - `git config --global user.name '<username>'`
+            sets the author name globally
+    - `git config --global user.email '<email>'`
+            sets the email globally
+    - `git help <verb>`
+            get help text from the html in git 
+    - `git <verb> --help`
+          opens help html on the browser 
+    - `git <verb> -h`
+             gives you list of help options in CMD
+    - `git init`
+         initializes the git and have all the tracking information
+    - `git status`
+         tracks all the changes made, this will ignore the files mentioned in gitignore
+    - `git clone`
+            download a local copy of a repository,
+            with all the history of past versions.
+    - `git status`
+        report on state of local repository, including any
+        untracked files, unpushed commits, etc.
+    - `git diff`
+            gives difference made in the code
+    - git add
+        stage changes to be committed.
+        use "."/ "-A" to stage all changes in the currect directory.
+    - git reset <file to be unstaged>
+    - git reset 
+        will reset all files
+    - git commit
+        record a permanent commit of changes to the local
+        repository.
+        use "-m" to add a commit message in-line. launches nano otherwise.
+    - git log 
+            info about the commit author and commit message
+    - git push
+        upload all new commits to the remote (GitHub).
+        will fail if there are already un-pulled commits there.
+        will fail if you lack permissions.
+    - git pull
+            update your local repository with all new commits
+            from the remote (GitHub).
+            will fail if any local changes conflict.
+    - Get out of git
+            Ctrl+X: quit
+                     (Y, enter to save unsaved changes)
+
+### Git Remote commands 
+    - git remote -v
+    - git branch -a
