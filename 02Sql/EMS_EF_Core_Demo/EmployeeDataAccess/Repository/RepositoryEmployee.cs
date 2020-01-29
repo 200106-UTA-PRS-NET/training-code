@@ -32,6 +32,11 @@ namespace EmployeeDataAccess.Repository
             db.SaveChanges();// this will execute the above generate insert query
         }
 
+        public EmployeeLib.Employee GetEmployeeById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<EmployeeLib.Employee> GetEmployees()
         {
             var query = from e in db.Employee

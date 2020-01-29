@@ -35,7 +35,7 @@ namespace EMS_Web
         public void ConfigureServices(IServiceCollection services)
         {
             //looks for connections string from one of the .json files
-            string connectionString = Configuration.GetConnectionString("EmpDb");
+            string connectionString = Configuration.GetConnectionString("TestDb");
 
             services.AddDbContext<EmployeeDbContext>(options=>
                 options.UseSqlServer(connectionString));

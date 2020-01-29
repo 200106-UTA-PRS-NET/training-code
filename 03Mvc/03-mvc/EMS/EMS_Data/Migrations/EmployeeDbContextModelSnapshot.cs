@@ -111,7 +111,7 @@ namespace EMS_Data.Migrations
                             Lname = "Belotte",
                             Salary = 11000.00m,
                             Ssn = "789kl45",
-                            Startdate = new DateTime(2020, 1, 28, 14, 40, 54, 334, DateTimeKind.Local).AddTicks(5071)
+                            Startdate = new DateTime(2020, 1, 29, 7, 45, 39, 677, DateTimeKind.Local).AddTicks(4808)
                         },
                         new
                         {
@@ -122,7 +122,7 @@ namespace EMS_Data.Migrations
                             Lname = "Coley",
                             Salary = 5000.00m,
                             Ssn = "745kl65",
-                            Startdate = new DateTime(2020, 1, 28, 14, 40, 54, 336, DateTimeKind.Local).AddTicks(6903)
+                            Startdate = new DateTime(2020, 1, 29, 7, 45, 39, 679, DateTimeKind.Local).AddTicks(3133)
                         });
                 });
 

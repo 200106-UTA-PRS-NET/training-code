@@ -28,9 +28,9 @@ namespace EMS_Web.Controllers
                 RedirectToActionResult-> RedirectToAction()
              */
         // GET: Employee
-        //[Route("")]// this is default route
-        //[Route("Employee")]// this is route with only Employee
-        //[Route("Employee/Index")]
+        [Route("")]// this is default route
+        [Route("Employee")]// this is route with only Employee
+        [Route("Employee/Index")]
         public ActionResult Index()
         {
             var employees=_repository.GetEmployees();

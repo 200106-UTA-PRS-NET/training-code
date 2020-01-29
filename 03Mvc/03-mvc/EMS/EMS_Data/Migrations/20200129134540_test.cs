@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EMS_Data.Migrations
 {
-    public partial class initempdb : Migration
+    public partial class test : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -66,13 +66,13 @@ namespace EMS_Data.Migrations
                 schema: "Revature",
                 table: "employee",
                 columns: new[] { "id", "age", "Deptid", "Fname", "Lname", "Mname", "salary", "ssn", "startdate" },
-                values: new object[] { 1, 35, 1, "Fred", "Belotte", null, 11000.00m, "789kl45", new DateTime(2020, 1, 28, 14, 40, 54, 334, DateTimeKind.Local).AddTicks(5071) });
+                values: new object[] { 1, 35, 1, "Fred", "Belotte", null, 11000.00m, "789kl45", new DateTime(2020, 1, 29, 7, 45, 39, 677, DateTimeKind.Local).AddTicks(4808) });
 
             migrationBuilder.InsertData(
                 schema: "Revature",
                 table: "employee",
                 columns: new[] { "id", "age", "Deptid", "Fname", "Lname", "Mname", "salary", "ssn", "startdate" },
-                values: new object[] { 2, 25, 2, "Cameron", "Coley", null, 5000.00m, "745kl65", new DateTime(2020, 1, 28, 14, 40, 54, 336, DateTimeKind.Local).AddTicks(6903) });
+                values: new object[] { 2, 25, 2, "Cameron", "Coley", null, 5000.00m, "745kl65", new DateTime(2020, 1, 29, 7, 45, 39, 679, DateTimeKind.Local).AddTicks(3133) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_employee_Deptid",

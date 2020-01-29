@@ -1,0 +1,325 @@
+[33mcommit a5a7955dc7fd547a72e81e33f34d2c5378de6b2e[m[33m ([m[1;36mHEAD -> [m[1;32mtestbranch[m[33m, [m[1;31morigin/testbranch[m[33m)[m
+Author: kaur <pushpinder.kaur@revature.com>
+Date:   Wed Jan 29 05:58:02 2020 -0600
+
+    notes
+
+[33mcommit 3b3a0c07417a8738b926e7472db26d9aefe55c22[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: kaur <pushpinder.kaur@revature.com>
+Date:   Wed Jan 29 05:02:51 2020 -0600
+
+    secrets, re-migration of db to new computer, week-4 contetnts
+
+[33mcommit ee39eb6c5a25449557dcbd45e383f23a99ceea8f[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 16:34:45 2020 -0600
+
+    Test cases and create, details view
+
+[33mcommit 48b92dead8145a098859720fbed26d7c9186e1f8[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 14:17:41 2020 -0600
+
+    MVC Employee Index and Create view
+
+[33mcommit 7a09a4c25dd61091629c68b15871ac98f58be567[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 12:18:47 2020 -0600
+
+    Adding another migration to add a new field in Dept and updating docs for EF core
+
+[33mcommit 74c1e122fc1ba49dd66e8d6d6fcc1d2d0c70322e[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 10:56:39 2020 -0600
+
+    notes and Code First activity to do
+
+[33mcommit a52e2cae2db0485aa95e70dc3b28de91b9834f29[m
+Merge: 6a74612 a024797
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 09:54:41 2020 -0600
+
+    Merge branch 'master' of https://github.com/200106-UTA-PRS-NET/training-code
+
+[33mcommit 6a74612f964e1da0b6521ffda7dcf04d05c2935e[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 27 09:54:24 2020 -0600
+
+    Project migration to MVC with EF Core code first
+
+[33mcommit a024797dae9896fc2e4c087e26590206c386d61e[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Mon Jan 27 07:38:34 2020 -0600
+
+    Update week-3-curriculum.md
+
+[33mcommit e73b634b6777e1c5720b6505e6568515a30fcb88[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Fri Jan 24 08:44:17 2020 -0600
+
+    fixed tag helper with hyperlink
+
+[33mcommit 84602f7b124ce72306d2ae2327ec2976d0f2963d[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 23 16:49:41 2020 -0600
+
+    More Helpers methods
+
+[33mcommit 619c65517415c90cc6fb36c8100b374add11c86d[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 23 15:49:57 2020 -0600
+
+    HTML Helper and Views
+
+[33mcommit 2979d5341b5bbecd53695c6d14b9876d1efb28fd[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 23 12:27:24 2020 -0600
+
+    Controllers, views
+
+[33mcommit 7047736594f80105a5f439ee341f2bebdf24cb9e[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 22 16:59:46 2020 -0600
+
+    hello mvc
+
+[33mcommit 9c827565575c3de9956e612ed6582112ab0ef93f[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 22 15:18:28 2020 -0600
+
+    css guide
+
+[33mcommit b7de63d094cacff58c124cfd2c7453482f2c6c51[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 22 14:56:54 2020 -0600
+
+    intro to CSS
+
+[33mcommit 403bb3163675f95b7ae36a4736445d821be1d4ac[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 22 09:46:44 2020 -0600
+
+    coding challenge
+
+[33mcommit 522afe8da900b1fa8b40cb32a5892d7b1449afee[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Tue Jan 21 16:49:00 2020 -0600
+
+    more html
+
+[33mcommit ff46907a20178b1ec215d338dc542931c6913489[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Tue Jan 21 15:00:58 2020 -0600
+
+    basics of html5
+
+[33mcommit f6feb311544a1c75ae8b86077dd62d4471b7846f[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Tue Jan 21 13:44:57 2020 -0600
+
+    Week 3
+
+[33mcommit d688ad333f2f2057c8824236ffbeb0837f3e3cd7[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Fri Jan 17 16:19:31 2020 -0600
+
+    joins
+
+[33mcommit 5c5be1094431d1e543f2bacd3dc73c04dd212bbe[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Fri Jan 17 13:24:27 2020 -0600
+
+    ADO.Net
+
+[33mcommit 8f49a99b6af2afb16cb0576598adf5b3072c36c9[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Fri Jan 17 10:39:10 2020 -0600
+
+    more Sql Practise Queries and Backup files
+
+[33mcommit a402d49b14e2305c84e47fb9865ba5010d67f9ea[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Thu Jan 16 17:05:12 2020 -0600
+
+    Triggers, Stored Procedures
+
+[33mcommit 766051cac4e562b70d2b4205ad8fa6ac1793704c[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Thu Jan 16 16:15:47 2020 -0600
+
+    Repository Design Pattern with IOC
+
+[33mcommit 5609360ba93e7141f3448da709ef8e9667c216f4[m
+Merge: 371b3a6 2834e95
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Thu Jan 16 10:40:09 2020 -0600
+
+    Merge branch 'master' of https://github.com/200106-UTA-PRS-NET/training-code
+
+[33mcommit 371b3a67aea3b66e60fd4d934a6b9baec3afdc8f[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Thu Jan 16 10:39:48 2020 -0600
+
+    Rsstaurant project with EF and Respository Design Pattern
+
+[33mcommit 2834e957ca4eff538d5ef7a3ffec39df0506c814[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Wed Jan 15 17:00:35 2020 -0600
+
+    cleaner mark down
+
+[33mcommit c285c173fbd992ea081cf6cf2e89c52bcabe6217[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Wed Jan 15 16:04:20 2020 -0600
+
+    with users secrets.json
+
+[33mcommit 2d8fa594dc7e1c8888c65c7caf207b46ed4bc297[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Wed Jan 15 15:54:11 2020 -0600
+
+    EFCore basic Demo
+
+[33mcommit 8e013f8a7798ca745a23465eb73ec5b6bda40f2c[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Wed Jan 15 14:15:00 2020 -0600
+
+    Steps for EF Core
+
+[33mcommit 5ffa4c33c4647b6672533108468aa8007c4ff774[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Tue Jan 14 16:00:12 2020 -0600
+
+    Intro to Sql
+
+[33mcommit 4078959f0d765ff7f316616a827acacc5a427932[m
+Author: Jarrett Green <jarrett_green@outlook.com>
+Date:   Tue Jan 14 11:57:53 2020 -0600
+
+    Week 1 and 2 topics added
+
+[33mcommit c1d522e3cf396218f027b9e39e8d505d684612cb[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Mon Jan 13 11:54:31 2020 -0600
+
+    P0 architecture optional folders
+
+[33mcommit b088481a48dce7bc1d153314a6c8295f0197afd7[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 13 07:58:11 2020 -0600
+
+    Coding Challenge
+
+[33mcommit 8169151c463e9ca216fc1e15b768f1463dc6b37a[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Fri Jan 10 15:06:53 2020 -0600
+
+    Access Modifiers, Lambda and Linq
+
+[33mcommit f7b4188cfff31cfa07b3f1d43795773fba93a010[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 9 15:00:42 2020 -0600
+
+     events - publish and subscribe
+
+[33mcommit b1e23e6fba6b70da8d76fe3e361300bd9b6852ac[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 9 12:37:10 2020 -0600
+
+    Action and Func delegates
+
+[33mcommit 5a514cea79c45f590974e21db26fcb90f8bfb2a8[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Thu Jan 9 12:24:53 2020 -0600
+
+    Intro to Delegates
+
+[33mcommit 64e587c59a0813dd74f67b6f6e04bb58017cca54[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 8 15:54:15 2020 -0600
+
+    variance Arrays fizzbuzz and string reversal
+
+[33mcommit b00e69eafb86b188066d7e9c91893d93e2a9df5b[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 8 14:31:07 2020 -0600
+
+    Generics
+
+[33mcommit 8ebac94ddb92dc77aa14a64acad1200b3ad28b75[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 8 11:56:46 2020 -0600
+
+    Abstraction - abstract class and interface
+
+[33mcommit cacda5c0492f881b0925cb07d5c587a50e83d3da[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 8 11:11:22 2020 -0600
+
+    polymorphism
+
+[33mcommit d4fd222e2eb910fd1cf5ce2440acea59d14b9f49[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Wed Jan 8 10:39:31 2020 -0600
+
+    OOPs-Inheritance, constructors, base
+
+[33mcommit b916b953fd326c5ac4549af549185dd3559f7a22[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 17:19:24 2020 -0600
+
+    sln, properties, access modifiers
+
+[33mcommit 75b856c2b49dcea15f5ae4b7e2239c6373839ea0[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 14:47:42 2020 -0600
+
+     correction
+
+[33mcommit 9810da2a17c1bc40893f6f1e418b141096cd7ac5[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 14:46:53 2020 -0600
+
+    task
+
+[33mcommit d8ad20f422f6dc80dd637e49e3e39c17597e7c31[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 14:26:53 2020 -0600
+
+    bash notes
+
+[33mcommit aa0005d9a65401d0ba1bdf764b93307ad243753d[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Tue Jan 7 14:24:33 2020 -0600
+
+    Added link to gitignore
+
+[33mcommit f90ac6484261148dc851849af2568a476b73a537[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 14:19:31 2020 -0600
+
+    add gitignore and clean up
+
+[33mcommit ee916bb1029d5a534cc55be079727ee6a9bdb2b4[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Tue Jan 7 08:56:59 2020 -0600
+
+    adding new content
+
+[33mcommit 9390be8f34de9bbe8a42e44334e50eabafe444d1[m
+Author: Pushpinder Kaur <kaurrevature@outlook.com>
+Date:   Mon Jan 6 16:19:13 2020 -0600
+
+    first C# program
+
+[33mcommit efe3b4cad55a6ab838c89cd47d7f0c9c697f08ab[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Mon Jan 6 10:17:53 2020 -0600
+
+    Update README.md
+
+[33mcommit 57f3f7331475b82b5c7eaf03881aa4b69ac4ffd2[m
+Author: kaurrevature <33356218+kaurrevature@users.noreply.github.com>
+Date:   Mon Jan 6 10:16:20 2020 -0600
+
+    Initial commit

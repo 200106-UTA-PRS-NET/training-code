@@ -74,4 +74,36 @@
 
 ### Git Remote commands 
     - git remote -v
+        gives the remote version of the branch
     - git branch -a
+        lists all the branches
+    - git branch <feature branch name>
+        creates a new branch copying the contents of master
+    - git checkout <branch name/feature branch>
+        takes you out of master and points its to working branch
+        let you work on the featured branch mentioned
+        you can use git status, git add, git commit in this branch
+    - git push -u origin <feature branch>
+        lets you push to the feature branch with upstream (means that feature branch and origin 
+        are associated)
+        if you use git branch -a will list you all the branch with * pointing to the current branch
+    - git checkout master
+        to change the pointer/head to master
+        sometimes the work in feature branch has changes to commit and it will give error to checkout to master in this case either commit and push those changes or use `git stash save <filename>
+        use git branch -a to check the pointer if its pointing to master
+        also make sure to make a git pull origin master to get any changes made by a team  memeber in the master
+    - git branch --merged    
+        to see what feature branches have been merged to master        
+    - git merge <feature branch name>    
+        merges changes from the feature branch to master 
+    - git push origin master 
+        will make final changes to the master    
+        use git branch --merged to check what branch has been merged to master 
+    - git branch -d <feature branch name>
+        deletes the feature branch from the working directory
+        but if you use `git branch -a` it will show that there is <feature branch in > in origin
+    - git push origin --delete <feature branch name>
+        this will delete the vranch from the origin
+        test it using the git branch -a
+    
+    
