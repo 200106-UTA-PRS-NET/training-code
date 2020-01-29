@@ -1,0 +1,6 @@
+AppSettings.json
+	AppSettings.<env>.json
+LaunchSettings.json
+Secret.json
+Environment variables
+Commandline arguements

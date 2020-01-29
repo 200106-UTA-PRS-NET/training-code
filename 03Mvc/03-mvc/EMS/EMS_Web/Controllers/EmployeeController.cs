@@ -28,9 +28,9 @@ namespace EMS_Web.Controllers
                 RedirectToActionResult-> RedirectToAction()
              */
         // GET: Employee
-        [Route("")]// this is default route
-        [Route("Employee")]// this is route with only Employee
-        [Route("Employee/Index")]
+        //[Route("")]// this is default route
+        //[Route("Employee")]// this is route with only Employee
+        //[Route("Employee/Index")]
         public ActionResult Index()
         {
             var employees=_repository.GetEmployees();
@@ -53,7 +53,7 @@ namespace EMS_Web.Controllers
         }
 
         // GET: Employee/Details/5
-        public ActionResult Details(int id=1)
+        public ActionResult Details([FromRoute]int id=1)
         {
             var employee = _repository.GetEmployeeById(id);
                 EmployeeViewModel evm = new EmployeeViewModel() { 
@@ -85,7 +85,7 @@ namespace EMS_Web.Controllers
         // FormCollection
         // QueryString
         // File
-        public ActionResult Create(EmployeeViewModel employee)
+        public ActionResult Create([Bind("Fname,Lname,Age,Ssn")]EmployeeViewModel employee, IFormCollection form)
         {
             try
             {

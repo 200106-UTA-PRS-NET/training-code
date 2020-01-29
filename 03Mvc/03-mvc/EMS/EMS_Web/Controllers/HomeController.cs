@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EMS_Web.Models;
+using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Session;
 
 namespace EMS_Web.Controllers
 {
@@ -20,6 +22,9 @@ namespace EMS_Web.Controllers
 
         public IActionResult Index()
         {
+           //ViewBag.data = "Hello from Home";
+           //TempData["data"]= "Hello from Home";
+           //HttpContext.Session.SetString("login","Pushpinder");
             return View();
         }
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace EmployeeDataAccess.Models
 {
@@ -27,78 +26,29 @@ namespace EmployeeDataAccess.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Department>(entity =>
-            {
-                entity.ToTable("Department", "Revature");
+            modelBuilder.Entity<Department>().HasData(
+                new Department()
+                {
+                    Id=1,
+                    Name="R&D",
+                    Phone="765432190"
+                }
+                );
+            modelBuilder.Entity<Employee>().HasData(
+                new Employee()
+                {
+                    Id=1,
+                    Fname="Pushpinder",
+                    Lname="Kaur",
+                    Age=32,
+                    Deptid=1,
+                    Salary=15000.00M,
+                    Ssn="767875791",
+                    Startdate=new DateTime(2019,07,03)
+                });
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasColumnName("name")
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Phone)
-                    .IsRequired()
-                    .HasColumnName("phone")
-                    .HasMaxLength(10)
-                    .IsUnicode(false)
-                    .IsFixedLength();
-            });
-
-            modelBuilder.Entity<Employee>(entity =>
-            {
-                entity.ToTable("Employee", "Revature");
-
-                entity.HasIndex(e => e.Ssn)
-                    .HasName("UQ__Employee__DDDF0AE6EE7D75C9")
-                    .IsUnique();
-
-                entity.Property(e => e.Age).HasColumnName("age");
-
-                entity.Property(e => e.Deptid)
-                    .HasColumnName("deptid")
-                    .HasDefaultValueSql("((1))");
-
-                entity.Property(e => e.Fname)
-                    .IsRequired()
-                    .HasColumnName("fname")
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Lname)
-                    .IsRequired()
-                    .HasColumnName("lname")
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Mname)
-                    .HasColumnName("mname")
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Salary)
-                    .HasColumnName("salary")
-                    .HasColumnType("money")
-                    .HasDefaultValueSql("((5000))");
-
-                entity.Property(e => e.Ssn)
-                    .HasColumnName("ssn")
-                    .HasMaxLength(9)
-                    .IsUnicode(false)
-                    .IsFixedLength();
-
-                entity.Property(e => e.Startdate)
-                    .HasColumnName("startdate")
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
-
-                entity.HasOne(d => d.Dept)
-                    .WithMany(p => p.Employee)
-                    .HasForeignKey(d => d.Deptid)
-                    .HasConstraintName("FK_Dept_Employee_Id");
-            });
-
-            OnModelCreatingPartial(modelBuilder);
         }
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        
     }
 }

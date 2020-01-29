@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EMS_Data.Migrations
 {
-    public partial class initdb : Migration
+    public partial class initempdb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,7 +17,8 @@ namespace EMS_Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
-                    Phone = table.Column<string>(nullable: true)
+                    Phone = table.Column<string>(nullable: true),
+                    Head = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -53,25 +54,25 @@ namespace EMS_Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Department",
-                columns: new[] { "Id", "Name", "Phone" },
-                values: new object[] { 1, "Training", "7894561230" });
+                columns: new[] { "Id", "Head", "Name", "Phone" },
+                values: new object[] { 1, null, "Training", "7894561230" });
 
             migrationBuilder.InsertData(
                 table: "Department",
-                columns: new[] { "Id", "Name", "Phone" },
-                values: new object[] { 2, "HR", "9876543210" });
+                columns: new[] { "Id", "Head", "Name", "Phone" },
+                values: new object[] { 2, null, "HR", "9876543210" });
 
             migrationBuilder.InsertData(
                 schema: "Revature",
                 table: "employee",
                 columns: new[] { "id", "age", "Deptid", "Fname", "Lname", "Mname", "salary", "ssn", "startdate" },
-                values: new object[] { 1, 35, 1, "Fred", "Belotte", null, 11000.00m, "789kl45", new DateTime(2020, 1, 24, 12, 38, 44, 942, DateTimeKind.Local).AddTicks(4796) });
+                values: new object[] { 1, 35, 1, "Fred", "Belotte", null, 11000.00m, "789kl45", new DateTime(2020, 1, 28, 14, 40, 54, 334, DateTimeKind.Local).AddTicks(5071) });
 
             migrationBuilder.InsertData(
                 schema: "Revature",
                 table: "employee",
                 columns: new[] { "id", "age", "Deptid", "Fname", "Lname", "Mname", "salary", "ssn", "startdate" },
-                values: new object[] { 2, 25, 2, "Cameron", "Coley", null, 5000.00m, "745kl65", new DateTime(2020, 1, 24, 12, 38, 44, 947, DateTimeKind.Local).AddTicks(85) });
+                values: new object[] { 2, 25, 2, "Cameron", "Coley", null, 5000.00m, "745kl65", new DateTime(2020, 1, 28, 14, 40, 54, 336, DateTimeKind.Local).AddTicks(6903) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_employee_Deptid",

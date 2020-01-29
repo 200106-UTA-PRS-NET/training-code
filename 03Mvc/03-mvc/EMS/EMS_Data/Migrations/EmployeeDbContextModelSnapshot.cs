@@ -4,16 +4,14 @@ using EMS_Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EMS_Data.Migrations
 {
     [DbContext(typeof(EmployeeDbContext))]
-    [Migration("20200127175840_new field head in dept")]
-    partial class newfieldheadindept
+    partial class EmployeeDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -113,7 +111,7 @@ namespace EMS_Data.Migrations
                             Lname = "Belotte",
                             Salary = 11000.00m,
                             Ssn = "789kl45",
-                            Startdate = new DateTime(2020, 1, 27, 11, 58, 39, 717, DateTimeKind.Local).AddTicks(7456)
+                            Startdate = new DateTime(2020, 1, 28, 14, 40, 54, 334, DateTimeKind.Local).AddTicks(5071)
                         },
                         new
                         {
@@ -124,7 +122,7 @@ namespace EMS_Data.Migrations
                             Lname = "Coley",
                             Salary = 5000.00m,
                             Ssn = "745kl65",
-                            Startdate = new DateTime(2020, 1, 27, 11, 58, 39, 720, DateTimeKind.Local).AddTicks(9388)
+                            Startdate = new DateTime(2020, 1, 28, 14, 40, 54, 336, DateTimeKind.Local).AddTicks(6903)
                         });
                 });
 

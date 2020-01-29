@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EmployeeDataAccess.Models
 {
-    public partial class Department
+    [Table("Department", Schema = "Revature")]
+    public class Department
     {
         public Department()
         {
