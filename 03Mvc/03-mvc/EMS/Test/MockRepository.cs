@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using EmployeeLib;
 using EmployeeLib.Abstractions;
+using System.Linq;
 
 namespace Test
 {
@@ -38,7 +39,7 @@ namespace Test
 
         public Employee GetEmployeeById(int id)
         {
-            throw new NotImplementedException();
+            return employees.FirstOrDefault(e => e.Id == id);
         }
 
         public IEnumerable<Employee> GetEmployees()
