@@ -48,61 +48,62 @@
         untracked files, unpushed commits, etc.
     - `git diff`
             gives difference made in the code
-    - git add
+    - `git add`
         stage changes to be committed.
         use "."/ "-A" to stage all changes in the currect directory.
-    - git reset <file to be unstaged>
-    - git reset 
+    - `git reset <file to be unstaged>`
+    - `git reset`
         will reset all files
-    - git commit
+    - `git commit`
         record a permanent commit of changes to the local
         repository.
         use "-m" to add a commit message in-line. launches nano otherwise.
-    - git log 
+    - `git log` 
             info about the commit author and commit message
-    - git push
+    - `git push`
         upload all new commits to the remote (GitHub).
         will fail if there are already un-pulled commits there.
         will fail if you lack permissions.
-    - git pull
+    - `git pull`
             update your local repository with all new commits
             from the remote (GitHub).
             will fail if any local changes conflict.
     - Get out of git
             Ctrl+X: quit
+            Shift :wq
                      (Y, enter to save unsaved changes)
 
 ### Git Remote commands 
-    - git remote -v
+    - `git remote -v`
         gives the remote version of the branch
-    - git branch -a
+    - `git branch -a`
         lists all the branches
-    - git branch <feature branch name>
+    - `git branch <feature branch name>`
         creates a new branch copying the contents of master
-    - git checkout <branch name/feature branch>
+    - `git checkout <branch name/feature branch>`
         takes you out of master and points its to working branch
         let you work on the featured branch mentioned
         you can use git status, git add, git commit in this branch
-    - git push -u origin <feature branch>
+    - `git push -u origin <feature branch>`
         lets you push to the feature branch with upstream (means that feature branch and origin 
         are associated)
         if you use git branch -a will list you all the branch with * pointing to the current branch
-    - git checkout master
+    - `git checkout master`
         to change the pointer/head to master
-        sometimes the work in feature branch has changes to commit and it will give error to checkout to master in this case either commit and push those changes or use `git stash save <filename>
-        use git branch -a to check the pointer if its pointing to master
+        sometimes the work in feature branch has changes to commit and it will give error to checkout to master in this case either commit and push those changes or use `git     -  `stash save <filename>`
+            use git branch -a to check the pointer if its pointing to master
         also make sure to make a git pull origin master to get any changes made by a team  memeber in the master
-    - git branch --merged    
+    - `git branch --merged`
         to see what feature branches have been merged to master        
-    - git merge <feature branch name>    
+    - `git merge <feature branch name>`    
         merges changes from the feature branch to master 
-    - git push origin master 
+    - `git push origin master` 
         will make final changes to the master    
         use git branch --merged to check what branch has been merged to master 
-    - git branch -d <feature branch name>
+    - `git branch -d <feature branch name>`
         deletes the feature branch from the working directory
         but if you use `git branch -a` it will show that there is <feature branch in > in origin
-    - git push origin --delete <feature branch name>
+    - `git push origin --delete <feature branch name>`
         this will delete the vranch from the origin
         test it using the git branch -a
     

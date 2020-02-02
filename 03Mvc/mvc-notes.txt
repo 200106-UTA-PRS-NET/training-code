@@ -30,12 +30,12 @@ model depends on nothing
     part of separation of concerns; testability
 
 		Action Methods can have different ActionResults which are implementation classes for IActionResult
-			IActionResult
-				ActionResult
-					ViewResult
+		IActionResult
+			ActionResult
+				ViewResult
 						View() -> returns a view or a template or an html
 
-					PartialViewResult
+				PartialViewResult
 						PartialView() -> view within a view
 				JsonResult
 					Json()
@@ -60,16 +60,18 @@ Passing Data
 	Controller to View
 		ViewBag
 		ViewData
+		Tempdata
+		Session
 		Model
 		
 Views : they are the pages visible to Users. In Asp.Net Core View Engine (Razor) renders the page 
 	Types of Views
 		1. Layout View
 		2. Weakly Typed View
-		3. Strongly Typed View
+		3. Strongly Typed View : a view tied to a model, auto intellisense will be supported
 		4. Static view : plain html with no data
 		5. Partial Views : a small part of the page for reusability or to make code simple
-		6. Dynamic Views: Views which are strongly typed but not explicitly tied to the model
+		6. Dynamic Views: Views which are strongly typed but not explicitly tied to the model, here the auto-intellisense will not be working
 
 models should be strongly typed. that gives us the benefit of type checking and intellisense in the view.
 
@@ -152,7 +154,8 @@ dependency injection using registered services
     scoped (request)
     transient (new one every class)
 
-	filters https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters
+Filters:
+filters https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters
     authorization filters - control access
     resource filters - implement caching
     (then model binding happens)

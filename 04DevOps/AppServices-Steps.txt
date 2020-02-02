@@ -1,3 +1,0 @@
-- Create SQL Azure database
-- Create a new blank database and note down the datapoints
-- Change the connection string to Azure Sql connection String in VS project
