@@ -23,3 +23,7 @@ FROM mcr.microsoft.com/dotnet/core/runtime:3.1
 # take the contents of the publish folder outside docker...
 #  ... and put them in a new folder /app at the root of inside Docker's file system.
 COPY publish/ /app
+
+# after building the image, we can run the container's app like:
+#    docker run edbbc50752e1 dotnet //app/ConsoleApp.dll
+# (replacing edbbc50752e1 with your image's hash)
