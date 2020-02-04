@@ -20,7 +20,7 @@
 - .NET deployment
     - publish, local IIS, Azure App Service
 - Azure DevOps
-    - Pipelines, build, release, YAML, job, step, GitHub Check
+    - Pipelines, build, release, YAML, job, step
 - Code analysis
     - static analysis, SonarCloud, technical debt, configuration, quality profile, quality gate
 - Docker
