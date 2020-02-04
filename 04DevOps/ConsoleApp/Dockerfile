@@ -27,3 +27,7 @@ COPY publish/ /app
 # after building the image, we can run the container's app like:
 #    docker run edbbc50752e1 dotnet //app/ConsoleApp.dll
 # (replacing edbbc50752e1 with your image's hash)
+
+# we can configure the image with a default command to start up with.
+CMD dotnet /app/ConsoleApp.dll
+# (CMD is often used with a weird [""] syntax)
