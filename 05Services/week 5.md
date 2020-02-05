@@ -1,0 +1,32 @@
+- service-oriented architecture
+    - patterns, principles, endpoint, contract
+- SOAP
+    - envelope, header, body, XML, XML Schema
+    - WSDL
+        - port, binding, portType, operation
+    - implementation
+        - WCF, address, binding, contract, attributes
+- REST
+    - uniform interface, client-server, stateless, cacheable, layered, code-on-demand
+    - HTTP
+        - methods, safe, idempotent, status codes, request headers, response headers
+    - implementation
+        - ASP.NET Core, HttpClient
+        - JSON, XML, content negotiation, IActionResult types, custom formatter
+- security
+    - authentication, authorization
+- JavaScript
+    - ES5, ES6, types, scopes, truthy/falsy, loose equality, JSON, prototypes
+    - functions
+        - arrow, callback, closure, IIFE
+
+Downloads : [Postman](https://www.postman.com/downloads/) or [Fiddler](https://www.telerik.com/download/fiddler) for api Testing
+
+SOA: https://www.geeksforgeeks.org/service-oriented-architecture/
+HTTP : https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+HTTP Messages : https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages
+HTTP Methods/verbs : https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods (go and read details about most of the methods atleast (get, put, post and delete)
+HTTP status codes : https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+All about REST : https://restfulapi.net/  (all trailing links)
+Asp.net web API: https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.1 (all trailing links from overview to Handle Errors)
+API Security : https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/4-WebApp-your-API (lets see if this works)
