@@ -44,7 +44,8 @@ namespace ContactApi
             });
             app.UseSwaggerUI(options=>
             {
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", swaggerOptions.Description);
+                //options.SwaggerEndpoint("/swagger/v1/swagger.json", swaggerOptions.Description);
+                options.SwaggerEndpoint(swaggerOptions.UIEndpoint, swaggerOptions.Description);
             });
             app.UseRouting();           
 
