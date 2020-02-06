@@ -16,6 +16,7 @@ namespace ContactApi.Controllers
             new Contact(){Id=4,FirstName="Fred",LastName="Belotte", contactType=ContactType.work,Phone="99999999999999" }
         };
 
+        [HttpGet]// author: developer name-> added the annotations
         public IEnumerable<Contact> Get()
         {
             return contacts;
