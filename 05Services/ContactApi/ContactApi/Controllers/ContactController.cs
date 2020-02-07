@@ -1,32 +1,80 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ContactApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace ContactApi.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]   
     public class ContactController : ControllerBase
     {
-        static List<Contact> contacts = new List<Contact>() { 
-            new Contact(){Id=1, FirstName="Princy",LastName="Kalsi",contactType=ContactType.mobile,Phone="9876543210"},
-            new Contact(){Id=2,FirstName="Annei",LastName="Kaur", contactType=ContactType.personal,Phone="1234567890"},
-            new Contact(){Id=3,FirstName="Jamey",LastName="Wilson", contactType=ContactType.work,Phone="7890543222"},
-            new Contact(){Id=4,FirstName="Fred",LastName="Belotte", contactType=ContactType.work,Phone="99999999999999" }
-        };
+        private readonly ContactStore _contactStore;
+        public ContactController(ContactStore contactStore)
+        {
+            _contactStore = contactStore ?? throw new ArgumentNullException(nameof(ContactStore));
+        }  
 
         [HttpGet]// author: developer name-> added the annotations
-        public IEnumerable<Contact> Get()
+        public ActionResult Get()
         {
-            return contacts;
-        }
-        [HttpPost]
-        public IActionResult Post([FromBody]Contact contact)
-        {
-            contacts.Add(contact);
-            return Ok($"{ contact.Id} is added");
+            // return _contactStore.contacts;
+            return Content("string");
         }
 
+        [HttpGet("{id}",Name ="Get")]
+        public Contact Get(int id)
+        {
+            return _contactStore.contacts.FirstOrDefault(x=>x.Id==id);
+        }
+        [HttpPost]
+        public IActionResult Post([FromBody, Bind("FirstName,LastName,Phone,contactType")]Contact contact)
+        {
+            // we don't need this, because with [ApiController] attribute,
+            // we automatically do this on every action method:
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest("all error infos"); // 400, client error
+            //}
+
+            // other validation besides data annotations, you'll need to return BadRequest manually.
+
+            // the client can't set the ID
+            int newid =_contactStore.contacts.Max(x=>x.Id) + 1;
+            contact.Id = newid;
+            _contactStore.contacts.Add(contact);
+            
+            // in a response to POST, you're supposed to
+            // send "201 Created" status, with a Location header indicating
+            // the URL of the newly created resource, and a representation of the
+            // new resource in the body.
+            return CreatedAtRoute("Get", new { Id = newid }, contact);
+        }
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, [FromBody] Contact contact)
+        {
+            if (_contactStore.contacts.FirstOrDefault<Contact>(x=>x.Id==id) is Contact oldContact)
+            {
+                oldContact.FirstName = contact.FirstName;
+                oldContact.LastName = contact.LastName;
+                oldContact.Phone = contact.Phone;
+                oldContact.contactType = contact.contactType;
+                return NoContent();// 204 success and nothing is in the body
+            }
+            // not found (404)
+            return NotFound();
+        }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (_contactStore.contacts.FirstOrDefault<Contact>(x => x.Id == id) is Contact oldContact)
+            {
+                _contactStore.contacts.Remove(oldContact);
+                return NoContent();
+            }
+            // not found (404)
+            return NotFound();
+        }
     }
 }
