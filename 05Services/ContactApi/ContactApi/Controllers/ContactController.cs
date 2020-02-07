@@ -17,10 +17,10 @@ namespace ContactApi.Controllers
         }  
 
         [HttpGet]// author: developer name-> added the annotations
-        public ActionResult Get()
+        public IEnumerable<Contact> Get()
         {
-            // return _contactStore.contacts;
-            return Content("string");
+             return _contactStore.contacts;
+            //return Content("string");
         }
 
         [HttpGet("{id}",Name ="Get")]
