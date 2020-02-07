@@ -18,15 +18,21 @@ namespace ContactApi.Controllers
 
         [HttpGet]// author: developer name-> added the annotations
         public IEnumerable<Contact> Get()
+        //public IActionResult Get()
         {
+            //IOutputFormatter-> it converts a complex type in object type which can be serialized at runtime
              return _contactStore.contacts;
             //return Content("string");
         }
 
         [HttpGet("{id}",Name ="Get")]
-        public Contact Get(int id)
+        public IActionResult Get(int id)
         {
-            return _contactStore.contacts.FirstOrDefault(x=>x.Id==id);
+            var contact = _contactStore.contacts.FirstOrDefault<Contact>(x => x.Id == id) ;
+            if (contact != null)
+                return Ok(contact);
+            else
+                return NotFound();
         }
         [HttpPost]
         public IActionResult Post([FromBody, Bind("FirstName,LastName,Phone,contactType")]Contact contact)
