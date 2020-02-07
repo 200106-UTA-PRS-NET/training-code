@@ -18,6 +18,7 @@ namespace ContactWeb.Controllers
         {
             using (HttpClient client = new HttpClient())
             {
+               
                 string url = "https://localhost:44342/api/contact";
                 client.BaseAddress = new Uri(url);
                 var response = client.GetAsync("contact");
