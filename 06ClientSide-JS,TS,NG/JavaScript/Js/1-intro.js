@@ -66,8 +66,8 @@ var a=1, b='1';
 a=false, b=0;
 a=undefined,b=null;
 a= NaN, b=NaN;
-console.log(a==b);
-console.log(a===b);
+//console.log(a==b);
+//console.log(a===b);
 // Programming constructs in JS is like C, C++ 
     // if(){
 
