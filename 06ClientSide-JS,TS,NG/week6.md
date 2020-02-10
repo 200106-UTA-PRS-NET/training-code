@@ -1,0 +1,21 @@
+- JavaScript
+    - DOM
+    - Ajax
+        - XmlHttpRequest, Fetch API, CORS, Promises
+    - events
+        - event listeners, propagation, bubbling, capturing
+- Node
+- TypeScript
+- Webpack
+- Angular
+    - single-page application
+    - module
+    - component
+    - directives
+    - data binding
+    - service
+    - HttpClient
+    - Jasmine
+    - Karma
+    - ng CLI
+    - deployment
