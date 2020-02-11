@@ -1,8 +1,37 @@
 var btnJoke=document.querySelector("#btnJoke");
 var h2=document.querySelector("#jokeArea");
-btnJoke.addEventListener('click',loadJokeWithAjax);
-var url="http://api.icndb.com/jokes/random";
+//btnJoke.addEventListener('click',loadJokeWithAjax);
+//btnJoke.addEventListener('click',loadJokeWithFetch);
+//var url="http://api.icndb.com/jokes/random";
 
+
+function getDetails(id) {
+    debugger;
+   // var link = document.querySelector("#" + id);
+    var url = "https://localhost:44342/api/Contact/"+ id;
+    var request = new XMLHttpRequest();
+    request.onerror = function () {
+        console.log("Error");
+    };
+    request.onreadystatechange=function () {
+        debugger;
+        console.log(`${request.readyState} ${request.status}`);
+        if (request.readyState == 4 && request.status == 200) {
+            debugger;
+            var contact = JSON.parse(request.response);
+           console.log(contact);
+        }
+    };
+    request.open('GET', url);
+    request.send();
+
+}
+function loadJokeWithFetch(){
+    fetch(url)
+    .then(response=>response.json()) // fetch returns a promise which can be either success and arrive or failure
+    .then(h=>{h2.innerHTML=h.value.joke})
+    .catch(err=> {console.log(err)})
+}
 function loadJokeWithAjax(){
     var xhr=new XMLHttpRequest();// the object to make Ajax request to server
         xhr.onreadystatechange=function(e){
