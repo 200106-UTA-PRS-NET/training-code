@@ -4,10 +4,12 @@ using ContactApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 
 namespace ContactApi.Controllers
 {
     [Route("api/[controller]")]   
+    //[EnableCors("_allMyOrigins")]
     public class ContactController : ControllerBase
     {
         private readonly ContactStore _contactStore;

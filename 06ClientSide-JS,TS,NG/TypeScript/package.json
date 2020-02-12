@@ -1,0 +1,22 @@
+{
+  "name": "tsdemo",
+  "version": "1.0.0",
+  "description": "This is a TS demo file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tsdemo\u001b[D\u001b[D\u001b[D\u001b[D",
+    "demo"
+  ],
+  "author": "Pushpinder Kaur",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "3.7.5"
+  },
+  "dependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
