@@ -1,0 +1,18 @@
+{
+  "name": "TP-WP-NPM",
+  "version": "1.0.0",
+  "description": "demo on typescript with services, web pack and NPM",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server dist/",
+    "build": "tsc && webpack && cp src/index.html dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
