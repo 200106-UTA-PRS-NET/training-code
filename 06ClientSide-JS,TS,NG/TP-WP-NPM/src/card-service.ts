@@ -3,7 +3,7 @@ import Card from "./card";
 import DrawCardResponse from "./draw-card-response";
 
 export default class CardService {
-    deckId: string | null = null;
+    deckId: any = null;
     urlPrefix = 'https://deckofcardsapi.com/api'
 
     newDeck(): Promise<string> {
