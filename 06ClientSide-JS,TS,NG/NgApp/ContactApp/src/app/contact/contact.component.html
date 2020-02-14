@@ -1,0 +1,13 @@
+<button (click)='RecieveContacts()' class="btn btn-primary">Get Contacts</button>
+<div *ngIf='contacts!=null'>
+<h1>Contacts</h1>
+<ul class="list-group">
+    <li *ngFor='let contact of contacts'
+    class="list-group-item">
+        {{contact.firstName}}  {{contact.lastName}} {{contact.phone}}
+    </li>
+</ul>
+</div>
+<div *ngIf='contacts===null'>
+No contacts Recieved
+</div>
